@@ -14,8 +14,5 @@ fun removeDuplicates(nums: IntArray): Int {
 }
 
 fun main() {
-    val nums = intArrayOf(0, 0, 1, 1, 1, 2, 2, 3, 3, 4)
-    val output = removeDuplicates(nums)
-    println(nums.contentToString())
-    println(output)
+    assert(5 == removeDuplicates(intArrayOf(0, 0, 1, 1, 1, 2, 2, 3, 3, 4)))
 }
