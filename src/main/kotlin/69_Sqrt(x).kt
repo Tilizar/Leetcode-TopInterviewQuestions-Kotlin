@@ -19,8 +19,3 @@ fun mySqrt(x: Int): Int {
 
     return value
 }
-
-fun main() {
-    assert(2 == mySqrt(4))
-    assert(2 == mySqrt(8))
-}

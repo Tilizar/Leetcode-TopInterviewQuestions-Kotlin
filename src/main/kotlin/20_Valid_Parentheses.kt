@@ -12,9 +12,3 @@ fun isValid(s: String): Boolean {
 
     return stack.isEmpty()
 }
-
-fun main() {
-    assert(isValid("()"))
-    assert(isValid("()[]{}"))
-    assert(!isValid("(]"))
-}

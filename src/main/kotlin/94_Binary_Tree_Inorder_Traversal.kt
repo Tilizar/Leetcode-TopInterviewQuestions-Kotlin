@@ -13,12 +13,3 @@ fun inorderTraversal(root: TreeNode?): List<Int> {
 
     return acc
 }
-
-fun main() {
-    val tree = TreeNode(1).apply {
-        right = TreeNode(2).apply {
-            left = TreeNode(3)
-        }
-    }
-    assert(listOf(1, 3, 2) == inorderTraversal(tree))
-}

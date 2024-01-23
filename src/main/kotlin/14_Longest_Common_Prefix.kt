@@ -23,8 +23,3 @@ private fun commonPrefix(first: String, second: String): String {
 
     return first.substring(0, shortestLength)
 }
-
-fun main() {
-    assert("fl" == longestCommonPrefix(arrayOf("flower", "flow", "flight")))
-    assert("" == longestCommonPrefix(arrayOf("dog", "racecar", "car")))
-}

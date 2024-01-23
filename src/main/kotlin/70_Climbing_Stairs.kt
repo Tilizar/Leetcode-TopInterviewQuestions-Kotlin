@@ -10,8 +10,3 @@ fun climbStairs(n: Int): Int {
 
     return b
 }
-
-fun main() {
-    assert(2 == climbStairs(2))
-    assert(3 == climbStairs(3))
-}

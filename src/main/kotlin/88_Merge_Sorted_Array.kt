@@ -18,9 +18,3 @@ fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int) {
         outputCursor--
     }
 }
-
-fun main() {
-    val nums1 = intArrayOf(1, 2, 3, 0, 0, 0)
-    merge(nums1, 3, intArrayOf(2, 5, 6), 3)
-    assert(intArrayOf(1, 2, 2, 3, 5, 6) contentEquals nums1)
-}

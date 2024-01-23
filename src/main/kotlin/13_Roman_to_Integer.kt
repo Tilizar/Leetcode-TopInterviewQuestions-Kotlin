@@ -24,9 +24,3 @@ fun romanToInt(s: String): Int {
 
     return sum
 }
-
-fun main() {
-    assert(3 == romanToInt("III"))
-    assert(58 == romanToInt("LVIII"))
-    assert(1994 == romanToInt("MCMXCIV"))
-}
