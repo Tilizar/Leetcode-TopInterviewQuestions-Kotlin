@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.Test
+import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class `26_Remove_Duplicates_from_Sorted_Array` {

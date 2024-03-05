@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.Test
+import kotlin.test.Test
 import kotlin.test.assertContentEquals
 
 class `66_Plus_One` {

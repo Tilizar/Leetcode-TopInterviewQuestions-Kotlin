@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.Test
+import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class `28_Find_the_Index_of_the_First_Occurrence_in_a_String` {
