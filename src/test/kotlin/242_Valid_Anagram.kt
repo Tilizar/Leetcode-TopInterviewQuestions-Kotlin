@@ -1,6 +1,15 @@
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
+private fun isAnagram(s: String, t: String): Boolean {
+    if (s.length != t.length) return false
+
+    val sChars = s.toCharArray().sorted()
+    val tChars = t.toCharArray().sorted()
+
+    return sChars == tChars
+}
+
 class `242_Valid_Anagram` {
 
     @Test

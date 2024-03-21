@@ -3,6 +3,24 @@ import utils.ListNode.Companion.asListNode
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
+private fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {
+    var firstPointer = headA
+    var secondPointer = headB
+
+    while (firstPointer != null && secondPointer != null) {
+        if (firstPointer === secondPointer) {
+            return firstPointer
+        }
+
+        if (firstPointer.next == null && secondPointer.next == null) break
+
+        firstPointer = firstPointer.next ?: headB
+        secondPointer = secondPointer.next ?: headA
+    }
+
+    return null
+}
+
 class `160_Intersection_of_Two_Linked_Lists` {
 
     @Test

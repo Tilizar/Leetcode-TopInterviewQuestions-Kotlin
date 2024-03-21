@@ -1,6 +1,20 @@
 import kotlin.test.Test
 import kotlin.test.assertContentEquals
 
+private fun reverseString(s: CharArray) {
+    var left = 0
+    var right = s.lastIndex
+
+    while (left < right) {
+        val tmp = s[left]
+        s[left] = s[right]
+        s[right] = tmp
+
+        left++
+        right--
+    }
+}
+
 class `344_Reverse_String` {
 
     @Test

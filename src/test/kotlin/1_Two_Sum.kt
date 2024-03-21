@@ -1,6 +1,21 @@
 import kotlin.test.Test
 import kotlin.test.assertContentEquals
 
+private fun twoSum(nums: IntArray, target: Int): IntArray {
+    val cache = mutableMapOf<Int, Int>()
+
+    nums.forEachIndexed { index, number ->
+        val cached = cache[target - number]
+        if (cached != null) {
+            return intArrayOf(cached, index)
+        } else {
+            cache[number] = index
+        }
+    }
+
+    return intArrayOf()
+}
+
 class `1_Two_Sum` {
 
     @Test

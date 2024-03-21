@@ -1,6 +1,17 @@
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
+private fun firstUniqChar(s: String): Int {
+    val cache = mutableMapOf<Char, Int>()
+
+    for (i in s.lastIndex downTo 0) {
+        val char = s[i]
+        cache[char] = if (cache.contains(char)) -1 else i
+    }
+
+    return s.indexOfFirst { cache[it] != -1 }
+}
+
 class `387_First_Unique_Character_in_a_String` {
 
     @Test

@@ -2,6 +2,20 @@ import utils.TreeNode
 import kotlin.test.Test
 import kotlin.test.assertContentEquals
 
+private fun inorderTraversal(root: TreeNode?): List<Int> {
+    val acc = mutableListOf<Int>()
+
+    fun traverse(node: TreeNode) {
+        node.left?.let { traverse(it) }
+        acc.add(node.`val`)
+        node.right?.let { traverse(it) }
+    }
+
+    root?.let { traverse(it) }
+
+    return acc
+}
+
 class `94_Binary_Tree_Inorder_Traversal` {
 
     @Test

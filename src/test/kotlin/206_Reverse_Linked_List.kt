@@ -1,6 +1,21 @@
+import utils.ListNode
 import utils.ListNode.Companion.asListNode
 import kotlin.test.Test
 import kotlin.test.assertEquals
+
+private fun reverseList(head: ListNode?): ListNode? {
+    var current: ListNode? = head
+    var previous: ListNode? = null
+
+    while (current != null) {
+        val next = current.next
+        current.next = previous
+        previous = current
+        current = next
+    }
+
+    return previous
+}
 
 class `206_Reverse_Linked_List` {
 

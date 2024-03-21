@@ -1,6 +1,21 @@
 import kotlin.test.Test
 import kotlin.test.assertContentEquals
 
+private fun moveZeroes(nums: IntArray) {
+    var lastNonZeroIndex = 0
+
+    nums.forEach {
+        if (it != 0) {
+            nums[lastNonZeroIndex] = it
+            lastNonZeroIndex++
+        }
+    }
+
+    for (i in lastNonZeroIndex..nums.lastIndex) {
+        nums[i] = 0
+    }
+}
+
 class `283_Move_Zeroes` {
 
     @Test

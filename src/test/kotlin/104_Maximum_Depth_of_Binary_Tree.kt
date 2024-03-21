@@ -1,6 +1,12 @@
 import utils.TreeNode
+import kotlin.math.max
 import kotlin.test.Test
 import kotlin.test.assertEquals
+
+private fun maxDepth(root: TreeNode?): Int {
+    if (root == null) return 0
+    return max(maxDepth(root.left), maxDepth(root.right)) + 1
+}
 
 class `104_Maximum_Depth_of_Binary_Tree` {
 

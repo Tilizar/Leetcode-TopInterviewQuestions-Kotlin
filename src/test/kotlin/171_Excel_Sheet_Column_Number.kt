@@ -1,5 +1,18 @@
+import kotlin.math.pow
 import kotlin.test.Test
 import kotlin.test.assertEquals
+
+private fun titleToNumber(columnTitle: String): Int {
+    var result = 0
+
+    columnTitle.forEachIndexed { index, c ->
+        val multiplier = columnTitle.lastIndex - index
+        val numForChar = c - 'A' + 1
+        result += 26.0.pow(multiplier).toInt() * numForChar
+    }
+
+    return result
+}
 
 class `171_Excel_Sheet_Column_Number` {
 

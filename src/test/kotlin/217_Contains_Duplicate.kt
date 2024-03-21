@@ -1,6 +1,18 @@
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
+private fun containsDuplicate(nums: IntArray): Boolean {
+    nums.sort()
+
+    (1..nums.lastIndex).forEach {
+        if (nums[it] == nums[it - 1]) {
+            return true
+        }
+    }
+
+    return false
+}
+
 class `217_Contains_Duplicate` {
 
     @Test
