@@ -2,23 +2,23 @@ import kotlin.math.max
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-class `128_Longest_Consecutive_Sequence` {
+private fun longestConsecutive(nums: IntArray): Int {
+    val set = nums.toSet()
+    var output = 0
 
-    fun longestConsecutive(nums: IntArray): Int {
-        val set = nums.toSet()
-        var output = 0
-
-        for (num in nums) {
-            if (set.contains(num - 1)) continue
-            var count = 1
-            while (set.contains(num + count)) {
-                count++
-            }
-            output = max(output, count)
+    for (num in nums) {
+        if (set.contains(num - 1)) continue
+        var count = 1
+        while (set.contains(num + count)) {
+            count++
         }
-
-        return output
+        output = max(output, count)
     }
+
+    return output
+}
+
+class `128_Longest_Consecutive_Sequence` {
 
     @Test
     fun case_1() {
