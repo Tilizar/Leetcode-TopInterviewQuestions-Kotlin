@@ -1,4 +1,4 @@
-import utils.Node
+import utils.specific.leftAndRight.Node
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

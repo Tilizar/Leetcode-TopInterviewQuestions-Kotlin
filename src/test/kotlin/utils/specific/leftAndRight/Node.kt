@@ -1,4 +1,4 @@
-package utils
+package utils.specific.leftAndRight
 
 class Node(var `val`: Int) {
     var left: Node? = null
